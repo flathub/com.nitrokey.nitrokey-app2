@@ -11,6 +11,12 @@ build-options:
    - "CARGO_NET_OFFLINE=true"
 cleanup-commands:
   - "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
+  - "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
+  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{assistant,designer,linguist,lrelease,lupdate,qmllint}"
+  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
+  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/qml/QtQuick/Controls/{Imagine,Material,Universal,designer}"
+  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/translations/{qtwebengine_locales,linguist*,assistant*,designer*,qtdeclarative*,qt_help*}"
+  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/{lib,libexec}"
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
@@ -34,11 +40,8 @@ modules:
       - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
     sources:
       - type: archive
-        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.2.1.tar.gz
-        sha256: da869c32357e297e19b9a2ef4c9d06b891d9ac1201be86f91064aa3c425fdd63
-      - type: patch
-        path: disable_nrf_update.patch
-        sha256: 9025b5b1de2bd80216e1dd6775d5d39ef54ea20395aaf7c8bb480337830add62
-      - type: patch
-        path: metainfo.patch
-        sha256: 1cdedaa47b6c3da928cb23b50db81d5652bf1d1dfb439da18dd758289865d0bf
+        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.0.tar.gz
+        sha256: 036ed0822d81a4013c7a1e94f13b60ddfafe2b114ffd88b0591db1f2066ed01e
+    #- type: patch
+    #    path: disable_nrf_update.patch
+    #    sha256: 9025b5b1de2bd80216e1dd6775d5d39ef54ea20395aaf7c8bb480337830add62
