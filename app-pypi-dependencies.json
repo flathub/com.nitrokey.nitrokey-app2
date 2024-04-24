@@ -83,8 +83,22 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/f9/281a411a5281b674b10830a2f312c64464b49916d097b8919f009de579e0/pyelftools-0.30-py2.py3-none-any.whl",
-                    "sha256": "544c3440eddb9a0dce70b6611de0b28163d71def759d2ed57a0d00118fc5da86"
+                    "url": "https://files.pythonhosted.org/packages/f8/64/711030d9fe9ccaf6ee3ab1bcf4801c6bb3d0e585af18824a50b016b4f39c/pyelftools-0.31-py3-none-any.whl",
+                    "sha256": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
+                }
+            ]
+        },
+        {
+            "name": "python3-bitarray",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitarray==2.9.2\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz",
+                    "sha256": "a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e"
                 }
             ]
         },
@@ -92,13 +106,18 @@
             "name": "python3-bitstring",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitstring==4.0.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"bitstring==4.1.4\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d7/88/fab0e30b4cefc5f534fd277a01591376dfee1f80cd214f780cc4aeb07378/bitstring-4.0.2-py3-none-any.whl",
-                    "sha256": "f93893791e8a6ecb02adcc5c191aaa964a06a9e1449e326cfb4f49ff5198e588"
+                    "url": "https://files.pythonhosted.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz",
+                    "sha256": "a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/33/c3/4ceb28a082f94f83425bfebbf7aa667a0d0e357015ffd7ff201ae4976308/bitstring-4.1.4-py3-none-any.whl",
+                    "sha256": "da46c4d6f8f3fb75a85566fdd33d5083ba8b8f268ed76f34eefe5a00da426192"
                 }
             ]
         },
@@ -120,13 +139,13 @@
             "name": "python3-certifi",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"certifi==2023.11.17\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"certifi==2024.2.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-                    "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
                 }
             ]
         },
@@ -280,13 +299,13 @@
             "name": "python3-ecdsa",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.18.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ecdsa==0.19.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/d4/4f05f5d16a4863b30ba96c23b23e942da8889abfa1cdbabf2a0df12a4532/ecdsa-0.18.0-py2.py3-none-any.whl",
-                    "sha256": "80600258e7ed2f16b9aa1d7c295bd70194109ad5a30fdee0eaeefef1d4c559dd"
+                    "url": "https://files.pythonhosted.org/packages/00/e7/ed3243b30d1bec41675b6394a1daae46349dc2b855cb83be846a5a918238/ecdsa-0.19.0-py2.py3-none-any.whl",
+                    "sha256": "2cea9b88407fdac7bbeca0833b189e4c9c53f2ef1e1eaa29f6224dbc809b707a"
                 }
             ]
         },
@@ -294,13 +313,13 @@
             "name": "python3-fastjsonschema",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fastjsonschema==2.17.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fastjsonschema==2.18.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/a1/b3816c7945742ee95e2fb68dd59aaa205c9ce53ffd90704f70c2207a7b4d/fastjsonschema-2.17.1-py3-none-any.whl",
-                    "sha256": "4b90b252628ca695280924d863fe37234eebadc29c5360d322571233dc9746e0"
+                    "url": "https://files.pythonhosted.org/packages/7f/1a/8aad366cf1779351741e5c791ae76dc8b293f72e9448c689cc2e730f06cb/fastjsonschema-2.18.1-py3-none-any.whl",
+                    "sha256": "aec6a19e9f66e9810ab371cc913ad5f4e9e479b63a7072a2cd060a9369e329a8"
                 }
             ]
         },
@@ -308,7 +327,7 @@
             "name": "python3-fido2",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fido2==1.1.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fido2==1.1.3\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -323,13 +342,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e3/99/68bab31fbb49e8b3a58ce31cfde5ed9aede6efe5eebbece2eaf93ade75c0/fido2-1.1.2-py3-none-any.whl",
-                    "sha256": "a3b7d7d233dec3a4fa0d6178fc34d1cce17b820005a824f6ab96917a1e3be8d8"
+                    "url": "https://files.pythonhosted.org/packages/e7/d9/8bfb99128b11829fb6c1b0a5a996dc117224966806e8abb12cbb1fea196e/fido2-1.1.3-py3-none-any.whl",
+                    "sha256": "6be34c0b9fe85e4911fd2d103cce7ae8ce2f064384a7a2a3bd970b3ef7702931"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 }
             ]
         },
@@ -337,13 +356,13 @@
             "name": "python3-fire",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fire==0.5.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fire==0.6.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/94/ed/3b9a10605163f48517931083aee8364d4d6d3bb1aa9b75eb0a4a5e9fbfc1/fire-0.5.0.tar.gz",
-                    "sha256": "a6b0d49e98c8963910021f92bba66f65ab440da2982b78eb1bbf95a0a34aacc6"
+                    "url": "https://files.pythonhosted.org/packages/1b/1b/84c63f592ecdfbb3d77d22a8d93c9b92791e4fa35677ad71a7d6449100f8/fire-0.6.0.tar.gz",
+                    "sha256": "54ec5b996ecdd3c0309c800324a0703d6da512241bc73b553db959d98de0aa66"
                 },
                 {
                     "type": "file",
@@ -384,13 +403,13 @@
             "name": "python3-idna",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"idna==3.6\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"idna==3.7\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl",
-                    "sha256": "c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f"
+                    "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+                    "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
                 }
             ]
         },
@@ -398,18 +417,18 @@
             "name": "python3-importlib-metadata",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"importlib-metadata==7.0.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"importlib-metadata==7.1.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c0/8b/d8427f023c081a8303e6ac7209c16e6878f2765d5b59667f3903fbcfd365/importlib_metadata-7.0.1-py3-none-any.whl",
-                    "sha256": "4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e"
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl",
-                    "sha256": "0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
                 }
             ]
         },
@@ -417,13 +436,13 @@
             "name": "python3-importlib-resources",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"importlib-resources==6.1.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"importlib-resources==6.4.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/e8/facde510585869b5ec694e8e0363ffe4eba067cb357a8398a55f6a1f8023/importlib_resources-6.1.1-py3-none-any.whl",
-                    "sha256": "e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"
+                    "url": "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl",
+                    "sha256": "50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c"
                 }
             ]
         },
@@ -474,8 +493,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz",
-                    "sha256": "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
+                    "url": "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz",
+                    "sha256": "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
                 }
             ]
         },
@@ -516,8 +535,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/e8/facde510585869b5ec694e8e0363ffe4eba067cb357a8398a55f6a1f8023/importlib_resources-6.1.1-py3-none-any.whl",
-                    "sha256": "e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"
+                    "url": "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl",
+                    "sha256": "50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c"
                 },
                 {
                     "type": "file",
@@ -558,13 +577,13 @@
             "name": "python3-markupsafe",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install -I --verbose  --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"markupsafe==2.1.4\" --no-build-isolation"
+                "pip3 install -I --verbose  --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"markupsafe==2.1.5\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz",
-                    "sha256": "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
+                    "url": "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz",
+                    "sha256": "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
                 }
             ]
         },
@@ -591,8 +610,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-                    "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
                 },
                 {
                     "type": "file",
@@ -611,8 +630,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
@@ -640,8 +659,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/94/ed/3b9a10605163f48517931083aee8364d4d6d3bb1aa9b75eb0a4a5e9fbfc1/fire-0.5.0.tar.gz",
-                    "sha256": "a6b0d49e98c8963910021f92bba66f65ab440da2982b78eb1bbf95a0a34aacc6"
+                    "url": "https://files.pythonhosted.org/packages/1b/1b/84c63f592ecdfbb3d77d22a8d93c9b92791e4fa35677ad71a7d6449100f8/fire-0.6.0.tar.gz",
+                    "sha256": "54ec5b996ecdd3c0309c800324a0703d6da512241bc73b553db959d98de0aa66"
                 },
                 {
                     "type": "file",
@@ -665,8 +684,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/e5/f12a80907d0884e6dff9c16d0c0114d81b8cd07dc3ae54c5e962cc83037e/tqdm-4.66.1-py3-none-any.whl",
-                    "sha256": "d302b3c5b53d47bce91fea46679d9c3c6508cf6332229aa1e7d8653723793386"
+                    "url": "https://files.pythonhosted.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl",
+                    "sha256": "1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9"
                 }
             ]
         },
@@ -693,13 +712,13 @@
             "name": "python3-prettytable",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"prettytable==3.9.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"prettytable==3.10.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4d/81/316b6a55a0d1f327d04cc7b0ba9d04058cb62de6c3a4d4b0df280cbe3b0b/prettytable-3.9.0-py3-none-any.whl",
-                    "sha256": "a71292ab7769a5de274b146b276ce938786f56c31cf7cea88b6f3775d82fe8c8"
+                    "url": "https://files.pythonhosted.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl",
+                    "sha256": "6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92"
                 },
                 {
                     "type": "file",
@@ -740,27 +759,13 @@
             "name": "python3-pycparser",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycparser==2.21\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycparser==2.22\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
-                }
-            ]
-        },
-        {
-            "name": "python3-pycryptodome",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycryptodome==3.18.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b9/05/0e7547c445bbbc96c538d870e6c5c5a69a9fa5df0a9df3e27cb126527196/pycryptodome-3.18.0.tar.gz",
-                    "sha256": "c9adee653fc882d98956e33ca2c1fb582e23a8af7ac82fee75bd6113c55a0413"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 }
             ]
         },
@@ -768,13 +773,13 @@
             "name": "python3-pyelftools",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyelftools==0.30\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyelftools==0.31\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/f9/281a411a5281b674b10830a2f312c64464b49916d097b8919f009de579e0/pyelftools-0.30-py2.py3-none-any.whl",
-                    "sha256": "544c3440eddb9a0dce70b6611de0b28163d71def759d2ed57a0d00118fc5da86"
+                    "url": "https://files.pythonhosted.org/packages/f8/64/711030d9fe9ccaf6ee3ab1bcf4801c6bb3d0e585af18824a50b016b4f39c/pyelftools-0.31-py3-none-any.whl",
+                    "sha256": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
                 }
             ]
         },
@@ -782,7 +787,7 @@
             "name": "python3-pylink-square",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pylink-square==1.1.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pylink-square==1.2.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -792,8 +797,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/e6/4ff51c11ca7ccac992a109c103c39bdbbcaf1f7019c3af8b195d0e7da71e/pylink_square-1.1.0-py2.py3-none-any.whl",
-                    "sha256": "d212d486dc221e856fcb8fa86f88722ce9baeab030c3c9807ad1dcfcbed699d0"
+                    "url": "https://files.pythonhosted.org/packages/d7/a1/043191e57d78627a16f5a21622b75f7f3a026f1746aa0fdbb339f46acd72/pylink_square-1.2.0-py2.py3-none-any.whl",
+                    "sha256": "9aa81b23d20c70461137456d626091ce748c2a2bd53f1013633b609b5a1665de"
                 }
             ]
         },
@@ -801,19 +806,9 @@
             "name": "python3-pynitrokey",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pynitrokey==0.4.45\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pynitrokey==0.4.47\" --no-build-isolation"
             ],
             "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl",
-                    "sha256": "7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz",
-                    "sha256": "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
-                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz",
@@ -846,8 +841,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d7/88/fab0e30b4cefc5f534fd277a01591376dfee1f80cd214f780cc4aeb07378/bitstring-4.0.2-py3-none-any.whl",
-                    "sha256": "f93893791e8a6ecb02adcc5c191aaa964a06a9e1449e326cfb4f49ff5198e588"
+                    "url": "https://files.pythonhosted.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz",
+                    "sha256": "a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/33/c3/4ceb28a082f94f83425bfebbf7aa667a0d0e357015ffd7ff201ae4976308/bitstring-4.1.4-py3-none-any.whl",
+                    "sha256": "da46c4d6f8f3fb75a85566fdd33d5083ba8b8f268ed76f34eefe5a00da426192"
                 },
                 {
                     "type": "file",
@@ -856,8 +856,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-                    "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
                 },
                 {
                     "type": "file",
@@ -901,11 +901,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c0/76/c4aa9e408dbacee3f4de8e6c5417e5f55de7e62fb5a50300e1233a2c9cb5/commentjson-0.9.0.tar.gz",
-                    "sha256": "42f9f231d97d93aff3286a4dc0de39bfd91ae823d1d9eba9fa901fe0c7113dd4"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz",
                     "sha256": "dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e"
                 },
@@ -921,23 +916,23 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/d4/4f05f5d16a4863b30ba96c23b23e942da8889abfa1cdbabf2a0df12a4532/ecdsa-0.18.0-py2.py3-none-any.whl",
-                    "sha256": "80600258e7ed2f16b9aa1d7c295bd70194109ad5a30fdee0eaeefef1d4c559dd"
+                    "url": "https://files.pythonhosted.org/packages/00/e7/ed3243b30d1bec41675b6394a1daae46349dc2b855cb83be846a5a918238/ecdsa-0.19.0-py2.py3-none-any.whl",
+                    "sha256": "2cea9b88407fdac7bbeca0833b189e4c9c53f2ef1e1eaa29f6224dbc809b707a"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/a1/b3816c7945742ee95e2fb68dd59aaa205c9ce53ffd90704f70c2207a7b4d/fastjsonschema-2.17.1-py3-none-any.whl",
-                    "sha256": "4b90b252628ca695280924d863fe37234eebadc29c5360d322571233dc9746e0"
+                    "url": "https://files.pythonhosted.org/packages/7f/1a/8aad366cf1779351741e5c791ae76dc8b293f72e9448c689cc2e730f06cb/fastjsonschema-2.18.1-py3-none-any.whl",
+                    "sha256": "aec6a19e9f66e9810ab371cc913ad5f4e9e479b63a7072a2cd060a9369e329a8"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e3/99/68bab31fbb49e8b3a58ce31cfde5ed9aede6efe5eebbece2eaf93ade75c0/fido2-1.1.2-py3-none-any.whl",
-                    "sha256": "a3b7d7d233dec3a4fa0d6178fc34d1cce17b820005a824f6ab96917a1e3be8d8"
+                    "url": "https://files.pythonhosted.org/packages/e7/d9/8bfb99128b11829fb6c1b0a5a996dc117224966806e8abb12cbb1fea196e/fido2-1.1.3-py3-none-any.whl",
+                    "sha256": "6be34c0b9fe85e4911fd2d103cce7ae8ce2f064384a7a2a3bd970b3ef7702931"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/94/ed/3b9a10605163f48517931083aee8364d4d6d3bb1aa9b75eb0a4a5e9fbfc1/fire-0.5.0.tar.gz",
-                    "sha256": "a6b0d49e98c8963910021f92bba66f65ab440da2982b78eb1bbf95a0a34aacc6"
+                    "url": "https://files.pythonhosted.org/packages/1b/1b/84c63f592ecdfbb3d77d22a8d93c9b92791e4fa35677ad71a7d6449100f8/fire-0.6.0.tar.gz",
+                    "sha256": "54ec5b996ecdd3c0309c800324a0703d6da512241bc73b553db959d98de0aa66"
                 },
                 {
                     "type": "file",
@@ -951,18 +946,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl",
-                    "sha256": "c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f"
+                    "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+                    "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c0/8b/d8427f023c081a8303e6ac7209c16e6878f2765d5b59667f3903fbcfd365/importlib_metadata-7.0.1-py3-none-any.whl",
-                    "sha256": "4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e"
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/e8/facde510585869b5ec694e8e0363ffe4eba067cb357a8398a55f6a1f8023/importlib_resources-6.1.1-py3-none-any.whl",
-                    "sha256": "e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"
+                    "url": "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl",
+                    "sha256": "50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c"
                 },
                 {
                     "type": "file",
@@ -978,11 +973,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/e7/9c/eef7c591e6dc952f3636cfe0df712c0f9916cedf317810a3bb53ccb65cdd/lark-1.1.9-py3-none-any.whl",
                     "sha256": "a0dd3a87289f8ccbb325901e4222e723e7d745dbfc1803eaf5f3d2ace19cf2db"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/34/b8/aa7d6cf2d5efdd2fcd85cf39b33584fe12a0f7086ed451176ceb7fb510eb/lark-parser-0.7.8.tar.gz",
-                    "sha256": "26215ebb157e6fb2ee74319aa4445b9f3b7e456e26be215ce19fdaaa901c20a4"
                 },
                 {
                     "type": "file",
@@ -1021,8 +1011,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4d/81/316b6a55a0d1f327d04cc7b0ba9d04058cb62de6c3a4d4b0df280cbe3b0b/prettytable-3.9.0-py3-none-any.whl",
-                    "sha256": "a71292ab7769a5de274b146b276ce938786f56c31cf7cea88b6f3775d82fe8c8"
+                    "url": "https://files.pythonhosted.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl",
+                    "sha256": "6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92"
                 },
                 {
                     "type": "file",
@@ -1036,28 +1026,23 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b9/05/0e7547c445bbbc96c538d870e6c5c5a69a9fa5df0a9df3e27cb126527196/pycryptodome-3.18.0.tar.gz",
-                    "sha256": "c9adee653fc882d98956e33ca2c1fb582e23a8af7ac82fee75bd6113c55a0413"
+                    "url": "https://files.pythonhosted.org/packages/f8/64/711030d9fe9ccaf6ee3ab1bcf4801c6bb3d0e585af18824a50b016b4f39c/pyelftools-0.31-py3-none-any.whl",
+                    "sha256": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/f9/281a411a5281b674b10830a2f312c64464b49916d097b8919f009de579e0/pyelftools-0.30-py2.py3-none-any.whl",
-                    "sha256": "544c3440eddb9a0dce70b6611de0b28163d71def759d2ed57a0d00118fc5da86"
+                    "url": "https://files.pythonhosted.org/packages/d7/a1/043191e57d78627a16f5a21622b75f7f3a026f1746aa0fdbb339f46acd72/pylink_square-1.2.0-py2.py3-none-any.whl",
+                    "sha256": "9aa81b23d20c70461137456d626091ce748c2a2bd53f1013633b609b5a1665de"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/e6/4ff51c11ca7ccac992a109c103c39bdbbcaf1f7019c3af8b195d0e7da71e/pylink_square-1.1.0-py2.py3-none-any.whl",
-                    "sha256": "d212d486dc221e856fcb8fa86f88722ce9baeab030c3c9807ad1dcfcbed699d0"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ed/18/bb1308617cd06db6538f850fc1acb9678e0953ce411327452c02d93533d3/pynitrokey-0.4.45-py3-none-any.whl",
-                    "sha256": "529b8d936be3b523ed4ea4508712f46e08efa71f1fb72f1804b55b2ad5fb18ae"
+                    "url": "https://files.pythonhosted.org/packages/98/0f/40349c81b0fd54808d5ca8cd6f1b1369863820d82fd4accae07b22365fe6/pynitrokey-0.4.47-py3-none-any.whl",
+                    "sha256": "de3a85c58fe9bf6b007d85a7695d9fb72f85ee5e87750618f18543fcf9f06880"
                 },
                 {
                     "type": "file",
@@ -1121,8 +1106,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7c/00/478b4a8ae6a4e8ca74ce72ba3e68828b5cc466efe47615b354a09ffbd5ec/spsdk-1.11.0-py3-none-any.whl",
-                    "sha256": "79d956ee528b42e6bc8e6636a853773658ce526754906d457f545fd0783aee31"
+                    "url": "https://files.pythonhosted.org/packages/75/3d/2e1a7c62256f34207e0b1571a2ab27ea87245c4814cdc4bfb0f78f019fea/spsdk-2.0.1-py3-none-any.whl",
+                    "sha256": "330d14f00b167b31854f98cd2b66f9f055da9521eef798ec13195f7a549116d6"
                 },
                 {
                     "type": "file",
@@ -1136,8 +1121,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/e5/f12a80907d0884e6dff9c16d0c0114d81b8cd07dc3ae54c5e962cc83037e/tqdm-4.66.1-py3-none-any.whl",
-                    "sha256": "d302b3c5b53d47bce91fea46679d9c3c6508cf6332229aa1e7d8653723793386"
+                    "url": "https://files.pythonhosted.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl",
+                    "sha256": "1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9"
                 },
                 {
                     "type": "file",
@@ -1156,8 +1141,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl",
-                    "sha256": "0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
                 }
             ]
         },
@@ -1219,13 +1204,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c0/8b/d8427f023c081a8303e6ac7209c16e6878f2765d5b59667f3903fbcfd365/importlib_metadata-7.0.1-py3-none-any.whl",
-                    "sha256": "4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e"
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/e8/facde510585869b5ec694e8e0363ffe4eba067cb357a8398a55f6a1f8023/importlib_resources-6.1.1-py3-none-any.whl",
-                    "sha256": "e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"
+                    "url": "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl",
+                    "sha256": "50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c"
                 },
                 {
                     "type": "file",
@@ -1254,8 +1239,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4d/81/316b6a55a0d1f327d04cc7b0ba9d04058cb62de6c3a4d4b0df280cbe3b0b/prettytable-3.9.0-py3-none-any.whl",
-                    "sha256": "a71292ab7769a5de274b146b276ce938786f56c31cf7cea88b6f3775d82fe8c8"
+                    "url": "https://files.pythonhosted.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl",
+                    "sha256": "6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92"
                 },
                 {
                     "type": "file",
@@ -1264,18 +1249,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/f9/281a411a5281b674b10830a2f312c64464b49916d097b8919f009de579e0/pyelftools-0.30-py2.py3-none-any.whl",
-                    "sha256": "544c3440eddb9a0dce70b6611de0b28163d71def759d2ed57a0d00118fc5da86"
+                    "url": "https://files.pythonhosted.org/packages/f8/64/711030d9fe9ccaf6ee3ab1bcf4801c6bb3d0e585af18824a50b016b4f39c/pyelftools-0.31-py3-none-any.whl",
+                    "sha256": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/e6/4ff51c11ca7ccac992a109c103c39bdbbcaf1f7019c3af8b195d0e7da71e/pylink_square-1.1.0-py2.py3-none-any.whl",
-                    "sha256": "d212d486dc221e856fcb8fa86f88722ce9baeab030c3c9807ad1dcfcbed699d0"
+                    "url": "https://files.pythonhosted.org/packages/d7/a1/043191e57d78627a16f5a21622b75f7f3a026f1746aa0fdbb339f46acd72/pylink_square-1.2.0-py2.py3-none-any.whl",
+                    "sha256": "9aa81b23d20c70461137456d626091ce748c2a2bd53f1013633b609b5a1665de"
                 },
                 {
                     "type": "file",
@@ -1304,8 +1289,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl",
-                    "sha256": "0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
                 }
             ]
         },
@@ -1341,23 +1326,23 @@
             "name": "python3-pyside6-addons",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-addons==6.6.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-addons==6.7.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/b8/1f5335580241c3863584173308c842ffc74e05074f3f72b49e5b54ca18e3/PySide6_Addons-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "a0982da4033319667f9df5ed6fa8eff300a88216aec103a1fff6751a172b19a0"
+                    "url": "https://files.pythonhosted.org/packages/59/4f/7baa3b9081141242b161e80b5ae080f36b420d5cb779bb469fa5cb79a458/PySide6_Addons-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "888df2a916f1d59984e2f351e7d5850da0a04103e39501eb7d6a9b150e7431e6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/56/65/50d0ced768b717f709a5ab224b648eb533a862efd0cde67d19c2727200b0/PySide6_Essentials-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "c7185616083eab6f42eaed598d97d49fac4f60ae2e7415194140d54f58c2b42c"
+                    "url": "https://files.pythonhosted.org/packages/d8/f7/7a8a0c3a87fc9a898a521ae34aea5806f71f7bef1a0e032a6d954550fcea/PySide6_Essentials-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "e013238fe40596b804068e34ac173514943a41bf8e5fbb4edfc7c30b00431bd5"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bb/72/e54f758e49e8da0dcd9490d006c41a814b0e56898ce4ca054d60cdba97bd/shiboken6-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "fb102e4bc210006f0cdd0ce38e1aaaaf792bd871f02a2b3f01d07922c5cf4c59"
+                    "url": "https://files.pythonhosted.org/packages/6a/05/a2f348685041495be25709f85ca30d9f79fdc4f3bcd4f8da8b980b1de071/shiboken6-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "7887ba7ecfddb09ee9966325c1e229a17f3f444b0257b77cb7838792287d3e05"
                 }
             ]
         },
@@ -1365,18 +1350,18 @@
             "name": "python3-pyside6-essentials",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-essentials==6.6.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6-essentials==6.7.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/56/65/50d0ced768b717f709a5ab224b648eb533a862efd0cde67d19c2727200b0/PySide6_Essentials-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "c7185616083eab6f42eaed598d97d49fac4f60ae2e7415194140d54f58c2b42c"
+                    "url": "https://files.pythonhosted.org/packages/d8/f7/7a8a0c3a87fc9a898a521ae34aea5806f71f7bef1a0e032a6d954550fcea/PySide6_Essentials-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "e013238fe40596b804068e34ac173514943a41bf8e5fbb4edfc7c30b00431bd5"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bb/72/e54f758e49e8da0dcd9490d006c41a814b0e56898ce4ca054d60cdba97bd/shiboken6-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "fb102e4bc210006f0cdd0ce38e1aaaaf792bd871f02a2b3f01d07922c5cf4c59"
+                    "url": "https://files.pythonhosted.org/packages/6a/05/a2f348685041495be25709f85ca30d9f79fdc4f3bcd4f8da8b980b1de071/shiboken6-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "7887ba7ecfddb09ee9966325c1e229a17f3f444b0257b77cb7838792287d3e05"
                 }
             ]
         },
@@ -1384,28 +1369,28 @@
             "name": "python3-pyside6",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6==6.6.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyside6==6.7.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/24/3a/a970808004b16dabdfaf77fa602b43a85c4d8812709a8bae065577283c4c/PySide6-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "0a67587c088cb80e90d4ce3023b02466ea858c93a6dc9c4e062b13314e03d464"
+                    "url": "https://files.pythonhosted.org/packages/fb/c6/20149db21d8daefb529e81623bb4abbf20bb46958cec5b43935ae1628c96/PySide6-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "64d6b5751f8d04aedc5e8ea53ddc6613b392919056511a988b790fd3a00f7d01"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/b8/1f5335580241c3863584173308c842ffc74e05074f3f72b49e5b54ca18e3/PySide6_Addons-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "a0982da4033319667f9df5ed6fa8eff300a88216aec103a1fff6751a172b19a0"
+                    "url": "https://files.pythonhosted.org/packages/59/4f/7baa3b9081141242b161e80b5ae080f36b420d5cb779bb469fa5cb79a458/PySide6_Addons-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "888df2a916f1d59984e2f351e7d5850da0a04103e39501eb7d6a9b150e7431e6"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/56/65/50d0ced768b717f709a5ab224b648eb533a862efd0cde67d19c2727200b0/PySide6_Essentials-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "c7185616083eab6f42eaed598d97d49fac4f60ae2e7415194140d54f58c2b42c"
+                    "url": "https://files.pythonhosted.org/packages/d8/f7/7a8a0c3a87fc9a898a521ae34aea5806f71f7bef1a0e032a6d954550fcea/PySide6_Essentials-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "e013238fe40596b804068e34ac173514943a41bf8e5fbb4edfc7c30b00431bd5"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bb/72/e54f758e49e8da0dcd9490d006c41a814b0e56898ce4ca054d60cdba97bd/shiboken6-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "fb102e4bc210006f0cdd0ce38e1aaaaf792bd871f02a2b3f01d07922c5cf4c59"
+                    "url": "https://files.pythonhosted.org/packages/6a/05/a2f348685041495be25709f85ca30d9f79fdc4f3bcd4f8da8b980b1de071/shiboken6-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "7887ba7ecfddb09ee9966325c1e229a17f3f444b0257b77cb7838792287d3e05"
                 }
             ]
         },
@@ -1479,8 +1464,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz",
-                    "sha256": "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
+                    "url": "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz",
+                    "sha256": "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
                 },
                 {
                     "type": "file",
@@ -1498,8 +1483,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-                    "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
                 },
                 {
                     "type": "file",
@@ -1508,8 +1493,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl",
-                    "sha256": "c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f"
+                    "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+                    "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
                 },
                 {
                     "type": "file",
@@ -1574,13 +1559,13 @@
             "name": "python3-shiboken6",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"shiboken6==6.6.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"shiboken6==6.7.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bb/72/e54f758e49e8da0dcd9490d006c41a814b0e56898ce4ca054d60cdba97bd/shiboken6-6.6.1-cp38-abi3-manylinux_2_28_x86_64.whl",
-                    "sha256": "fb102e4bc210006f0cdd0ce38e1aaaaf792bd871f02a2b3f01d07922c5cf4c59"
+                    "url": "https://files.pythonhosted.org/packages/6a/05/a2f348685041495be25709f85ca30d9f79fdc4f3bcd4f8da8b980b1de071/shiboken6-6.7.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+                    "sha256": "7887ba7ecfddb09ee9966325c1e229a17f3f444b0257b77cb7838792287d3e05"
                 }
             ]
         },
@@ -1616,7 +1601,7 @@
             "name": "python3-spsdk",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"spsdk==1.11.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"spsdk==2.0.1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -1626,8 +1611,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fb/5a/fb1326fe32913e663c8e2d6bdf7cde6f472e51f9c21f0768d9b9080fe7c5/MarkupSafe-2.1.4.tar.gz",
-                    "sha256": "3aae9af4cac263007fd6309c64c6ab4506dd2b79382d9d19a1994f9240b8db4f"
+                    "url": "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz",
+                    "sha256": "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
                 },
                 {
                     "type": "file",
@@ -1661,8 +1646,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d7/88/fab0e30b4cefc5f534fd277a01591376dfee1f80cd214f780cc4aeb07378/bitstring-4.0.2-py3-none-any.whl",
-                    "sha256": "f93893791e8a6ecb02adcc5c191aaa964a06a9e1449e326cfb4f49ff5198e588"
+                    "url": "https://files.pythonhosted.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz",
+                    "sha256": "a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/33/c3/4ceb28a082f94f83425bfebbf7aa667a0d0e357015ffd7ff201ae4976308/bitstring-4.1.4-py3-none-any.whl",
+                    "sha256": "da46c4d6f8f3fb75a85566fdd33d5083ba8b8f268ed76f34eefe5a00da426192"
                 },
                 {
                     "type": "file",
@@ -1671,8 +1661,18 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz",
                     "sha256": "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz",
+                    "sha256": "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
                 },
                 {
                     "type": "file",
@@ -1721,8 +1721,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/a1/b3816c7945742ee95e2fb68dd59aaa205c9ce53ffd90704f70c2207a7b4d/fastjsonschema-2.17.1-py3-none-any.whl",
-                    "sha256": "4b90b252628ca695280924d863fe37234eebadc29c5360d322571233dc9746e0"
+                    "url": "https://files.pythonhosted.org/packages/7f/1a/8aad366cf1779351741e5c791ae76dc8b293f72e9448c689cc2e730f06cb/fastjsonschema-2.18.1-py3-none-any.whl",
+                    "sha256": "aec6a19e9f66e9810ab371cc913ad5f4e9e479b63a7072a2cd060a9369e329a8"
                 },
                 {
                     "type": "file",
@@ -1736,13 +1736,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c0/8b/d8427f023c081a8303e6ac7209c16e6878f2765d5b59667f3903fbcfd365/importlib_metadata-7.0.1-py3-none-any.whl",
-                    "sha256": "4805911c3a4ec7c3966410053e9ec6a1fecd629117df5adee56dfc9432a1081e"
+                    "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+                    "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/e8/facde510585869b5ec694e8e0363ffe4eba067cb357a8398a55f6a1f8023/importlib_resources-6.1.1-py3-none-any.whl",
-                    "sha256": "e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl",
+                    "sha256": "50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c"
                 },
                 {
                     "type": "file",
@@ -1786,8 +1791,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4d/81/316b6a55a0d1f327d04cc7b0ba9d04058cb62de6c3a4d4b0df280cbe3b0b/prettytable-3.9.0-py3-none-any.whl",
-                    "sha256": "a71292ab7769a5de274b146b276ce938786f56c31cf7cea88b6f3775d82fe8c8"
+                    "url": "https://files.pythonhosted.org/packages/3d/c4/a32f4bf44faf95accbbd5d7864ddef9e289749a8efbc3adaad4a4671779a/prettytable-3.10.0-py3-none-any.whl",
+                    "sha256": "6536efaf0757fdaa7d22e78b3aac3b69ea1b7200538c2c6995d649365bddab92"
                 },
                 {
                     "type": "file",
@@ -1796,23 +1801,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b9/05/0e7547c445bbbc96c538d870e6c5c5a69a9fa5df0a9df3e27cb126527196/pycryptodome-3.18.0.tar.gz",
-                    "sha256": "c9adee653fc882d98956e33ca2c1fb582e23a8af7ac82fee75bd6113c55a0413"
+                    "url": "https://files.pythonhosted.org/packages/f8/64/711030d9fe9ccaf6ee3ab1bcf4801c6bb3d0e585af18824a50b016b4f39c/pyelftools-0.31-py3-none-any.whl",
+                    "sha256": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/33/f9/281a411a5281b674b10830a2f312c64464b49916d097b8919f009de579e0/pyelftools-0.30-py2.py3-none-any.whl",
-                    "sha256": "544c3440eddb9a0dce70b6611de0b28163d71def759d2ed57a0d00118fc5da86"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5e/e6/4ff51c11ca7ccac992a109c103c39bdbbcaf1f7019c3af8b195d0e7da71e/pylink_square-1.1.0-py2.py3-none-any.whl",
-                    "sha256": "d212d486dc221e856fcb8fa86f88722ce9baeab030c3c9807ad1dcfcbed699d0"
+                    "url": "https://files.pythonhosted.org/packages/d7/a1/043191e57d78627a16f5a21622b75f7f3a026f1746aa0fdbb339f46acd72/pylink_square-1.2.0-py2.py3-none-any.whl",
+                    "sha256": "9aa81b23d20c70461137456d626091ce748c2a2bd53f1013633b609b5a1665de"
                 },
                 {
                     "type": "file",
@@ -1841,6 +1841,11 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl",
+                    "sha256": "58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/35/79/5e2cffa1c77432f11cd93a5351f30732c997a239d3a3090856a72d6d8ba7/ruamel.yaml-0.17.40-py3-none-any.whl",
                     "sha256": "b16b6c3816dff0a93dca12acf5e70afd089fa5acb80604afd1ffa8b465b7722c"
                 },
@@ -1861,8 +1866,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7c/00/478b4a8ae6a4e8ca74ce72ba3e68828b5cc466efe47615b354a09ffbd5ec/spsdk-1.11.0-py3-none-any.whl",
-                    "sha256": "79d956ee528b42e6bc8e6636a853773658ce526754906d457f545fd0783aee31"
+                    "url": "https://files.pythonhosted.org/packages/75/3d/2e1a7c62256f34207e0b1571a2ab27ea87245c4814cdc4bfb0f78f019fea/spsdk-2.0.1-py3-none-any.whl",
+                    "sha256": "330d14f00b167b31854f98cd2b66f9f055da9521eef798ec13195f7a549116d6"
                 },
                 {
                     "type": "file",
@@ -1871,13 +1876,18 @@
                 },
                 {
                     "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d2/b2/b157855192a68541a91ba7b2bbcb91f1b4faa51f8bae38d8005c034be524/urllib3-2.0.7-py3-none-any.whl",
+                    "sha256": "fdb6d215c776278489906c2f8916e6e7d4f5a9b602ccbcfdf7f016fc8da0596e"
+                },
+                {
+                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl",
                     "sha256": "3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl",
-                    "sha256": "0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
                 }
             ]
         },
@@ -1913,13 +1923,13 @@
             "name": "python3-tqdm",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tqdm==4.66.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tqdm==4.66.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/e5/f12a80907d0884e6dff9c16d0c0114d81b8cd07dc3ae54c5e962cc83037e/tqdm-4.66.1-py3-none-any.whl",
-                    "sha256": "d302b3c5b53d47bce91fea46679d9c3c6508cf6332229aa1e7d8653723793386"
+                    "url": "https://files.pythonhosted.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl",
+                    "sha256": "1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9"
                 }
             ]
         },
@@ -1969,13 +1979,13 @@
             "name": "python3-zipp",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"zipp==3.17.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"zipp==3.18.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d9/66/48866fc6b158c81cc2bfecc04c480f105c6040e8b077bc54c634b4a67926/zipp-3.17.0-py3-none-any.whl",
-                    "sha256": "0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
                 }
             ]
         },
