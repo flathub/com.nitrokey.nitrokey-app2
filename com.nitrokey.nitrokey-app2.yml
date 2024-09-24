@@ -34,14 +34,23 @@ modules:
     buildsystem: simple
     build-commands:
       - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation
+      # failed to correctly change the metainfo.xml for v2.3.2 - newest has to be first
+      - sed -i '20d' meta/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 meta/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 meta/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 meta/nk-app2.svg ${FLATPAK_DEST}/share/icons/hicolor/scaleable/apps/${FLATPAK_ID}.svg
       - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
     sources:
       - type: archive
-        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.0.tar.gz
-        sha256: 036ed0822d81a4013c7a1e94f13b60ddfafe2b114ffd88b0591db1f2066ed01e
+        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.2.tar.gz
+        sha256: d76605c91106eaedfe60070dae04e4dfb63f25c805d4e8c0408e005089c2c8f4 
+
+    # use this for testing w/o a final release
+    #sources:
+    #  - type: archive
+    #    url: https://github.com/Nitrokey/nitrokey-app2/archive/refs/heads/main.tar.gz
+    #    sha256: 2167f4c0c4e27e18ddffc20cba369a055574648598fff9249baed0cc96eaba43
+
     #- type: patch
     #    path: disable_nrf_update.patch
     #    sha256: 9025b5b1de2bd80216e1dd6775d5d39ef54ea20395aaf7c8bb480337830add62
