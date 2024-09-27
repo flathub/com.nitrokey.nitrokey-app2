@@ -53,13 +53,13 @@ rust-pypi-dependencies.json: rust-requirements.txt venv
 	mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
 
 	# extract cmsis-pack-manager cargo pkgs, generate cargo sources, append to sources
-	jq .modules[2].sources[3].url rust-pypi-dependencies.json | xargs curl -o tmp/cmsis.tgz
-	tar xf tmp/cmsis.tgz -C tmp 
-	venv/bin/python tools/flatpak-cargo-generator.py tmp/cmsis*/Cargo.lock -o cmsis.cargo-sources.json 
-	jq '.modules[2].sources[.modules[2].sources| length] |= . + "cmsis.cargo-sources.json"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
-	mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
-	jq '.modules[2]."build-options".env.CARGO_HOME = "/run/build/python3-cmsis-pack-manager/cargo"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
-	mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
+	#jq .modules[2].sources[3].url rust-pypi-dependencies.json | xargs curl -o tmp/cmsis.tgz
+	#tar xf tmp/cmsis.tgz -C tmp 
+	#venv/bin/python tools/flatpak-cargo-generator.py tmp/cmsis*/Cargo.lock -o cmsis.cargo-sources.json 
+	#jq '.modules[2].sources[.modules[2].sources| length] |= . + "cmsis.cargo-sources.json"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
+	#mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
+	#jq '.modules[2]."build-options".env.CARGO_HOME = "/run/build/python3-cmsis-pack-manager/cargo"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
+	#mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
 
 pre-pypi-dependencies.json: pre-requirements.txt venv
 	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.6
@@ -79,14 +79,13 @@ venv:
 # PY REQUIREMENTS
 
 pre-requirements.txt:
-	echo 'cffi==1.16.0; python_version >= "3.9" and python_version < "3.12"' > $@
-	echo 'packaging==23.2; python_version >= "3.9" and python_version < "3.12"' >> $@
-	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.12"' >> $@
+	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.13"' > $@
+	echo 'packaging==24.1; python_version >= "3.9" and python_version < "3.13"' >> $@
+	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.13"' >> $@
 
 rust-requirements.txt:
 	echo 'maturin==1.4.0; python_version >= "3.9" and python_version < "3.12"' > $@
-	echo 'cryptography==41.0.7 ; python_version >= "3.9" and python_version < "3.13"' >> $@
-	echo 'cmsis-pack-manager==0.5.3 ; python_version >= "3.9" and python_version < "3.13"' >> $@
+	echo 'cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.13"' >> $@
 
 
 app-requirements.txt: poetry.lock
@@ -94,6 +93,7 @@ app-requirements.txt: poetry.lock
 	sed -i -e '/hidapi/d' $@
 	sed -i -e '/pyreadline3/d' $@
 	sed -i -e '/pywin32/d' $@
+	sed -i -e '/wmi/d' $@
 	sed -i -e '/cryptography/d' $@
 	sed -i -e '/cffi/d' $@
 	sed -i -e '/cmsis-pack-manager/d' $@
