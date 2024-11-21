@@ -1,6 +1,6 @@
 app-id: com.nitrokey.nitrokey-app2
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.8'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -34,16 +34,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation
-      # failed to correctly change the metainfo.xml for v2.3.2 - newest has to be first
-      - sed -i '20d' meta/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 meta/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 meta/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 meta/nk-app2.svg ${FLATPAK_DEST}/share/icons/hicolor/scaleable/apps/${FLATPAK_ID}.svg
       - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
     sources:
       - type: archive
-        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.2.tar.gz
-        sha256: d76605c91106eaedfe60070dae04e4dfb63f25c805d4e8c0408e005089c2c8f4 
+        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.3.tar.gz
+        sha256: 3eaa4984f90dc238c305a3a1160a44517b2bdbf1d5d3ae1c6b796ab28b0cc54e 
 
     # use this for testing w/o a final release
     #sources:

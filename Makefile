@@ -31,8 +31,8 @@ check-meta:
 
 rust-pypi-dependencies.json: rust-requirements.txt venv
 	mkdir -p tmp
-	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.6
-	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.6" --requirements-file="rust-requirements.txt" --output rust-pypi-dependencies 
+	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.8
+	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.8" --requirements-file="rust-requirements.txt" --output rust-pypi-dependencies
 	
 	# extract maturin cargo pkgs, generate cargo sources, append to sources
 	jq .modules[0].sources[0].url rust-pypi-dependencies.json | xargs curl -o tmp/maturin.tgz
@@ -52,22 +52,13 @@ rust-pypi-dependencies.json: rust-requirements.txt venv
 	jq '.modules[1]."build-options".env.CARGO_HOME = "/run/build/python3-cryptography/cargo"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
 	mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
 
-	# extract cmsis-pack-manager cargo pkgs, generate cargo sources, append to sources
-	#jq .modules[2].sources[3].url rust-pypi-dependencies.json | xargs curl -o tmp/cmsis.tgz
-	#tar xf tmp/cmsis.tgz -C tmp 
-	#venv/bin/python tools/flatpak-cargo-generator.py tmp/cmsis*/Cargo.lock -o cmsis.cargo-sources.json 
-	#jq '.modules[2].sources[.modules[2].sources| length] |= . + "cmsis.cargo-sources.json"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
-	#mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
-	#jq '.modules[2]."build-options".env.CARGO_HOME = "/run/build/python3-cmsis-pack-manager/cargo"' rust-pypi-dependencies.json > rust-pypi-dependencies.json.tmp
-	#mv rust-pypi-dependencies.json.tmp rust-pypi-dependencies.json
-
 pre-pypi-dependencies.json: pre-requirements.txt venv
-	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.6
-	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.6" --requirements-file="pre-requirements.txt" --output pre-pypi-dependencies
+	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.8
+	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.8" --requirements-file="pre-requirements.txt" --output pre-pypi-dependencies
 
 app-pypi-dependencies.json: app-requirements.txt venv
-	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.6
-	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.6" --requirements-file="app-requirements.txt" --output app-pypi-dependencies
+	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.8
+	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.8" --requirements-file="app-requirements.txt" --output app-pypi-dependencies
 
 	# fix markupsafe
 	sed -i -r 's/pip3 install --verbose(.*?)markupsafe(.*?)/pip3 install -I --verbose \1markupsafe\2/g' app-pypi-dependencies.json
@@ -79,13 +70,13 @@ venv:
 # PY REQUIREMENTS
 
 pre-requirements.txt:
-	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.13"' > $@
-	echo 'packaging==24.1; python_version >= "3.9" and python_version < "3.13"' >> $@
-	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.13"' >> $@
+	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.14"' > $@
+	echo 'packaging==24.1; python_version >= "3.9" and python_version < "3.14"' >> $@
+	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.14"' >> $@
 
 rust-requirements.txt:
-	echo 'maturin==1.4.0; python_version >= "3.9" and python_version < "3.12"' > $@
-	echo 'cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.13"' >> $@
+	echo 'maturin==1.4.0; python_version >= "3.9" and python_version < "3.14"' > $@
+	echo 'cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.14"' >> $@
 
 
 app-requirements.txt: poetry.lock
@@ -98,6 +89,6 @@ app-requirements.txt: poetry.lock
 	sed -i -e '/cffi/d' $@
 	sed -i -e '/cmsis-pack-manager/d' $@
 	
-	echo 'pyreadline3==3.4.1 ; python_version >= "3.9" and python_version < "3.12"' >> $@
+	echo 'pyreadline3==3.4.1 ; python_version >= "3.9" and python_version < "3.13"' >> $@
 	
 
