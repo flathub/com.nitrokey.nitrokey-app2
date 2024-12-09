@@ -9,6 +9,7 @@ build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
   env: 
    - "CARGO_NET_OFFLINE=true"
+   - "POETRY_INSTALLER_MAX_WORKERS=1"
 cleanup-commands:
   - "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
   - "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
