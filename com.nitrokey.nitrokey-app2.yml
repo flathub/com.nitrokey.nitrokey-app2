@@ -16,7 +16,7 @@ cleanup-commands:
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/qml/QtQuick/Controls/{Imagine,Material,Universal,designer}"
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/translations/{qtwebengine_locales,linguist*,assistant*,designer*,qtdeclarative*,qt_help*}"
-  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/{lib,libexec}"
+  #- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/{lib,libexec}"
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
