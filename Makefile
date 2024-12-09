@@ -71,7 +71,7 @@ venv:
 
 pre-requirements.txt:
 	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.14"' > $@
-	echo 'packaging==24.1; python_version >= "3.9" and python_version < "3.14"' >> $@
+	echo 'packaging==24.2; python_version >= "3.9" and python_version < "3.14"' >> $@
 	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.14"' >> $@
 
 rust-requirements.txt:
