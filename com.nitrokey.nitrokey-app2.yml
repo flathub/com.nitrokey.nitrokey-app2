@@ -25,11 +25,10 @@ finish-args:
   - --device=all
   - --share=network
 modules:
-  - shared-modules/libusb/libusb.json
+  #- shared-modules/libusb/libusb.json
   - pre-pypi-dependencies.json
   - rust-pypi-dependencies.json
   - python3-poetry.json
-  - python3-hidapi.json
   - app-pypi-dependencies.json
   - name: nkapp
     buildsystem: simple

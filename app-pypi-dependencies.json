@@ -75,6 +75,20 @@
             ]
         },
         {
+            "name": "python3-hidapi",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"hidapi==0.14.0.post2\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/bf/6f/90c536b020a8e860f047a2839830a1ade3e1490e67336ecf489b4856eb7b/hidapi-0.14.0.post2.tar.gz",
+                    "sha256": "6c0e97ba6b059a309d51b495a8f0d5efbcea8756b640d98b6f6bb9fdef2458ac"
+                }
+            ]
+        },
+        {
             "name": "python3-idna",
             "buildsystem": "simple",
             "build-commands": [
@@ -127,8 +141,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/47/72/21ccaaca6ffb06f544afd16191425025d831c2a6d318635e9c8854070f2d/hidapi-0.14.0.post4.tar.gz",
-                    "sha256": "48fce253e526d17b663fbf9989c71c7ef7653ced5f4be65f1437c313fb3dbdf6"
+                    "url": "https://files.pythonhosted.org/packages/bf/6f/90c536b020a8e860f047a2839830a1ade3e1490e67336ecf489b4856eb7b/hidapi-0.14.0.post2.tar.gz",
+                    "sha256": "6c0e97ba6b059a309d51b495a8f0d5efbcea8756b640d98b6f6bb9fdef2458ac"
                 },
                 {
                     "type": "file",
@@ -399,7 +413,7 @@
             "name": "python3-usb-monitor",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"usb-monitor==1.21\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"usb-monitor==1.23\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -409,22 +423,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/75/aa/6b7816452c38f873e223c9f57aa5d549d07692909afbe65bdbb5d21c5af4/usb_monitor-1.21-py3-none-any.whl",
-                    "sha256": "1bd785f765f393ed49e5e2ef2107d9a687b8000e0016fdb77f2014f7586781dd"
-                }
-            ]
-        },
-        {
-            "name": "python3-pyreadline3",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyreadline3==3.4.1\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/56/fc/a3c13ded7b3057680c8ae95a9b6cc83e63657c38e0005c400a5d018a33a7/pyreadline3-3.4.1-py3-none-any.whl",
-                    "sha256": "b0efb6516fd4fb07b45949053826a62fa4cb353db5be2bbb4a7aa1fdd1e345fb"
+                    "url": "https://files.pythonhosted.org/packages/a4/0f/b29fa81cf7a44be5b41671424c805fa93f35072191499625552e894d16bf/usb_monitor-1.23-py3-none-any.whl",
+                    "sha256": "4753747dedf862bcdbd3c339c59a0d7ea9e133091e38bc3f8f3133dc217776bd"
                 }
             ]
         }

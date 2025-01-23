@@ -65,30 +65,42 @@ app-pypi-dependencies.json: app-requirements.txt venv
 
 venv:
 	python -m venv venv
-	venv/bin/pip install requirements-parser poetry aiohttp toml
+	venv/bin/pip install requirements-parser poetry poetry-plugin-export aiohttp toml
 
 # PY REQUIREMENTS
 
-pre-requirements.txt:
-	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.14"' > $@
-	echo 'packaging==24.2; python_version >= "3.9" and python_version < "3.14"' >> $@
-	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.14"' >> $@
+#pre-requirements.txt:
+#	echo 'cffi==1.17.1; python_version >= "3.9" and python_version < "3.14"' > $@
+#	echo 'packaging==24.2; python_version >= "3.9" and python_version < "3.14"' >> $@
+#	echo 'setuptools-rust==1.8.1; python_version >= "3.9" and python_version < "3.14"' >> $@
 
-rust-requirements.txt:
-	echo 'maturin==1.4.0; python_version >= "3.9" and python_version < "3.14"' > $@
-	echo 'cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.14"' >> $@
+#rust-requirements.txt:
+#	echo 'maturin==1.4.0; python_version >= "3.9" and python_version < "3.14"' > $@
+#	echo 'cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.14"' >> $@
 
 
-app-requirements.txt: poetry.lock
+rust-requirements.txt pre-requirements.txt app-requirements.txt: poetry.lock
 	venv/bin/poetry export --without-hashes -f requirements.txt --output app-requirements.txt
-	sed -i -e '/hidapi/d' $@
-	sed -i -e '/pyreadline3/d' $@
-	sed -i -e '/pywin32/d' $@
-	sed -i -e '/wmi/d' $@
-	sed -i -e '/cryptography/d' $@
-	sed -i -e '/cffi/d' $@
-	sed -i -e '/cmsis-pack-manager/d' $@
+
+	# exclude windows packages
+	sed -i -e '/Windows/d' app-requirements.txt
+	#sed -i -e '/hidapi/d' $@
+	#sed -i -e '/pyreadline3/d' $@
+	#sed -i -e '/pywin32/d' $@
+	#sed -i -e '/wmi/d' $@
+
+	# rust builds
+	echo maturin > rust-requirements.txt
+	grep cryptography app-requirements.txt >> rust-requirements.txt
+	sed -i -e '/cryptography/d' app-requirements.txt
+
+	# packaging requirements
+	grep cffi app-requirements.txt > pre-requirements.txt
+	sed -i -e '/cffi/d' app-requirements.txt
+	echo packaging >> pre-requirements.txt
+	echo setuptools-rust >> pre-requirements.txt
+	#echo poetry >> pre-requirements.txt
 	
-	echo 'pyreadline3==3.4.1 ; python_version >= "3.9" and python_version < "3.13"' >> $@
+	
 	
 
