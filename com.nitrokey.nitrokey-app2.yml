@@ -4,12 +4,17 @@ runtime-version: '6.8'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
+#add-extensions:
+#  org.freedesktop.Platform.udev:
+#    directory: "lib/udev"
+#    version: "24.08"
 command: nitrokeyapp
 build-options: 
   append-path: /usr/lib/sdk/rust-stable/bin
   env: 
    - "CARGO_NET_OFFLINE=true"
    - "POETRY_INSTALLER_MAX_WORKERS=1"
+   - "HIDAPI_WITH_LIBUSB=0"
 cleanup-commands:
   - "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
   - "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
@@ -24,11 +29,12 @@ finish-args:
   - --socket=wayland
   - --device=all
   - --share=network
+  - --
+#  - --system-talk-name=org.freedesktop.login1
 modules:
-  #- shared-modules/libusb/libusb.json
-  - pre-pypi-dependencies.json
-  - rust-pypi-dependencies.json
-  - python3-poetry.json
+  #- pre-pypi-dependencies.json
+  #- rust-pypi-dependencies.json
+  #- python3-poetry.json
   - app-pypi-dependencies.json
   - name: nkapp
     buildsystem: simple

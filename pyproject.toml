@@ -1,0 +1,85 @@
+[build-system]
+requires = ["poetry-core>=1.3.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "nitrokeyapp"
+version = "2.3.3"
+description = "Graphical application to manage Nitrokey devices"
+authors = [
+  "Nitrokey <pypi@nitrokey.com>",
+]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/nitrokey/nitrokey-app2"
+documentation = "https://docs.nitrokey.com/software/nk-app2/"
+classifiers=[
+  "License :: OSI Approved :: Apache Software License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+packages = [
+  {include = "nitrokeyapp"}
+]
+
+[tool.poetry.scripts]
+nitrokeyapp = "nitrokeyapp.__main__:main"
+
+[tool.poetry.dependencies]
+nitrokey = "^0.2.3"
+python = ">=3.9,<3.14"
+pySide6 = ">=6.6.0"
+pywin32 = { version = "305", markers = "sys_platform =='win32'" }
+usb-monitor = "^1.21"
+
+[tool.poetry.group.dev.dependencies]
+PySide6-stubs = "^6.4.2"
+black = ">=22.1.0,<23"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+mypy = ">=1.4,<1.5"
+
+[tool.poetry.group.deploy.dependencies]
+pyinstaller = "^6.3.0"
+pyinstaller-versionfile = { version = "2.1.1", markers = "sys_platform=='win32'" }
+
+[tool.isort]
+py_version = "39"
+profile = "black"
+line_length = 80
+
+[tool.black]
+target-version = ["py39"]
+
+[tool.mypy]
+show_error_codes = true
+python_version = "3.9"
+
+[[tool.mypy.overrides]]
+module = [
+  "nitrokeyapp.*",
+]
+disallow_untyped_defs = true
+
+# generated and unused files
+[[tool.mypy.overrides]]
+module = [
+  "nitrokeyapp.bak.*",
+  "nitrokeyapp.ui.*",
+]
+ignore_errors = true
+
+# libraries without annotations
+[[tool.mypy.overrides]]
+module = [
+  "win32api.*",
+  "win32con.*",
+  "win32gui.*",
+  "usbmonitor.*",
+]
+ignore_missing_imports = true

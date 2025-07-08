@@ -1,3 +1,0 @@
-cffi==1.17.1 ; python_version >= "3.9" and python_version < "3.14" and platform_python_implementation != "PyPy"
-packaging
-setuptools-rust

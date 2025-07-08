@@ -1,6 +1,11 @@
+scikit-build-core
+setuptools_rust
+maturin
 certifi==2024.8.30 ; python_version >= "3.9" and python_version < "3.14"
+cffi==1.17.1 ; python_version >= "3.9" and python_version < "3.14" and platform_python_implementation != "PyPy"
 charset-normalizer==3.4.0 ; python_version >= "3.9" and python_version < "3.14"
 crcmod==1.7 ; python_version >= "3.9" and python_version < "3.14"
+cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.14"
 fido2==1.1.3 ; python_version >= "3.9" and python_version < "3.14"
 hidapi==0.14.0.post2 ; python_version >= "3.9" and python_version < "3.14"
 idna==3.10 ; python_version >= "3.9" and python_version < "3.14"
@@ -19,3 +24,4 @@ shiboken6==6.8.0.2 ; python_version >= "3.9" and python_version < "3.14"
 tlv8==0.10.0 ; python_version >= "3.9" and python_version < "3.14"
 urllib3==2.2.3 ; python_version >= "3.9" and python_version < "3.14"
 usb-monitor==1.23 ; python_version >= "3.9" and python_version < "3.14"
+poetry
