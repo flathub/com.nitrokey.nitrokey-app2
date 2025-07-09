@@ -2,22 +2,15 @@
 
 set -euxo pipefail
 
-org_json=app-pypi-dependencies.json
-
+org_json=generated/pypi-dependencies.json
 
 PKG=$1
 
 mkdir -p tmp
 
-# extract maturin cargo pkgs, generate cargo sources, append to sources
+# extract cargo pkgs, generate cargo sources, append to sources
 IDX=`jq -r '.modules | map(.name) | index("python3-'$PKG'")' ${org_json}`
-
-#IDX=`jq '[.modules[] | to_entries[] | select(.value.name == "python3-'${PKG}'") | .key] | .[0]' -r ${org_json}`
-#echo $IDX
-#
 jq -r '.modules['$IDX'].sources[] | select(.url | contains("'$PKG'")) | .url' ${org_json} | xargs curl -o tmp/${PKG}.tgz
-# 
-#jq ".modules[$IDX].sources[0].url" ${org_json} | xargs curl -o tmp/${PKG}.tgz
 tar xf tmp/${PKG}.tgz -C tmp
 
 # aaaaaahhhhhh!!!!!!
@@ -27,7 +20,7 @@ else
   lockfile=Cargo.lock
 fi
 
-venv/bin/python tools/flatpak-cargo-generator.py tmp/${PKG}*/$lockfile -o ${PKG}.cargo-sources.json
+venv/bin/python tools/flatpak-cargo-generator.py tmp/${PKG}*/$lockfile -o generated/${PKG}.cargo-sources.json
 
 
 jq '.modules['$IDX'].sources[.modules['$IDX'].sources| length] |= . + "'$PKG'.cargo-sources.json"' ${org_json} > ${org_json}.tmp

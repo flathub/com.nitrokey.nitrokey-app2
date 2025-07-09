@@ -35,7 +35,7 @@ modules:
   #- pre-pypi-dependencies.json
   #- rust-pypi-dependencies.json
   #- python3-poetry.json
-  - app-pypi-dependencies.json
+  - generated/pypi-dependencies.json
   - name: nkapp
     buildsystem: simple
     build-commands:
