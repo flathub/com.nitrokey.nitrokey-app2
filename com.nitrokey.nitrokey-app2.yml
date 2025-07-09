@@ -4,10 +4,6 @@ runtime-version: '6.8'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-#add-extensions:
-#  org.freedesktop.Platform.udev:
-#    directory: "lib/udev"
-#    version: "24.08"
 command: nitrokeyapp
 build-options: 
   append-path: /usr/lib/sdk/rust-stable/bin
@@ -22,19 +18,13 @@ cleanup-commands:
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/qml/QtQuick/Controls/{Imagine,Material,Universal,designer}"
   - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/translations/{qtwebengine_locales,linguist*,assistant*,designer*,qtdeclarative*,qt_help*}"
-  #- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/{lib,libexec}"
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
   - --socket=wayland
   - --device=all
   - --share=network
-  - --
-#  - --system-talk-name=org.freedesktop.login1
 modules:
-  #- pre-pypi-dependencies.json
-  #- rust-pypi-dependencies.json
-  #- python3-poetry.json
   - generated/pypi-dependencies.json
   - name: nkapp
     buildsystem: simple
@@ -49,12 +39,3 @@ modules:
         url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.3.tar.gz
         sha256: 3eaa4984f90dc238c305a3a1160a44517b2bdbf1d5d3ae1c6b796ab28b0cc54e 
 
-    # use this for testing w/o a final release
-    #sources:
-    #  - type: archive
-    #    url: https://github.com/Nitrokey/nitrokey-app2/archive/refs/heads/main.tar.gz
-    #    sha256: 2167f4c0c4e27e18ddffc20cba369a055574648598fff9249baed0cc96eaba43
-
-    #- type: patch
-    #    path: disable_nrf_update.patch
-    #    sha256: 9025b5b1de2bd80216e1dd6775d5d39ef54ea20395aaf7c8bb480337830add62
