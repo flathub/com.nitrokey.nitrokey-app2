@@ -7,7 +7,7 @@ MANIFEST=com.nitrokey.nitrokey-app2.yml
 all: venv generated/pypi-dependencies.json
 	
 clean:
-	rm -rf builddir .flatpak-builder repo tmp venv nk-app2.flatpak
+	rm -rf builddir .flatpak-builder repo tmp venv nk-app2.flatpak imported/archive.tar.gz
 
 reset: clean
 	rm -f generated/*
@@ -40,7 +40,7 @@ generated/pypi-dependencies.json: generated/requirements.txt venv
 	
 venv:
 	python -m venv venv
-	venv/bin/pip install requirements-parser poetry poetry-plugin-export aiohttp toml
+	venv/bin/pip install requirements-parser poetry poetry-plugin-export aiohttp toml ruamel.yaml
 
 
 generated/requirements.txt: imported/poetry.lock

@@ -3,39 +3,39 @@ runtime: org.kde.Platform
 runtime-version: '6.8'
 sdk: org.kde.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-stable
+- org.freedesktop.Sdk.Extension.rust-stable
 command: nitrokeyapp
-build-options: 
+build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
-  env: 
-   - "CARGO_NET_OFFLINE=true"
-   - "POETRY_INSTALLER_MAX_WORKERS=1"
-   - "HIDAPI_WITH_LIBUSB=0"
+  env:
+  - "CARGO_NET_OFFLINE=true"
+  - "POETRY_INSTALLER_MAX_WORKERS=1"
+  - "HIDAPI_WITH_LIBUSB=0"
 cleanup-commands:
-  - "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
-  - "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
-  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{assistant,designer,linguist,lrelease,lupdate,qmllint}"
-  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
-  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/qml/QtQuick/Controls/{Imagine,Material,Universal,designer}"
-  - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/translations/{qtwebengine_locales,linguist*,assistant*,designer*,qtdeclarative*,qt_help*}"
+- "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
+- "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
+- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{assistant,designer,linguist,lrelease,lupdate,qmllint}"
+- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
+- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/qml/QtQuick/Controls/{Imagine,Material,Universal,designer}"
+- "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/Qt/translations/{qtwebengine_locales,linguist*,assistant*,designer*,qtdeclarative*,qt_help*}"
 finish-args:
-  - --share=ipc
-  - --socket=fallback-x11
-  - --socket=wayland
-  - --device=all
-  - --share=network
+- --share=ipc
+- --socket=fallback-x11
+- --socket=wayland
+- --device=all
+- --share=network
 modules:
-  - generated/pypi-dependencies.json
-  - name: nkapp
-    buildsystem: simple
-    build-commands:
-      - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation
-      - install -Dm644 meta/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
-      - install -Dm644 meta/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 meta/nk-app2.svg ${FLATPAK_DEST}/share/icons/hicolor/scaleable/apps/${FLATPAK_ID}.svg
-      - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-    sources:
-      - type: archive
-        url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.3.tar.gz
-        sha256: 3eaa4984f90dc238c305a3a1160a44517b2bdbf1d5d3ae1c6b796ab28b0cc54e 
+- generated/pypi-dependencies.json
+- name: nkapp
+  buildsystem: simple
+  build-commands:
+  - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation
+  - install -Dm644 meta/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+  - install -Dm644 meta/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+  - install -Dm644 meta/nk-app2.svg ${FLATPAK_DEST}/share/icons/hicolor/scaleable/apps/${FLATPAK_ID}.svg
+  - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+  sources:
+  - type: archive
+    url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.3.3.tar.gz
+    sha256: 3eaa4984f90dc238c305a3a1160a44517b2bdbf1d5d3ae1c6b796ab28b0cc54e
 
