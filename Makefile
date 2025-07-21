@@ -54,4 +54,4 @@ generated/requirements.txt: imported/poetry.lock
 	sed -i '1 i\setuptools_rust' $@
 	sed -i '1 i\scikit-build-core' $@
 
-	echo "poetry" >> $@
+	echo "poetry-core" >> $@

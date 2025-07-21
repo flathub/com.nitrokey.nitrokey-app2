@@ -23,5 +23,5 @@ setuptools==75.1.0 ; python_version >= "3.9" and python_version < "3.14"
 shiboken6==6.8.0.2 ; python_version >= "3.9" and python_version < "3.14"
 tlv8==0.10.0 ; python_version >= "3.9" and python_version < "3.14"
 urllib3==2.2.3 ; python_version >= "3.9" and python_version < "3.14"
-usb-monitor==1.23 ; python_version >= "3.9" and python_version < "3.14"
-poetry
+usb-monitor==1.21 ; python_version >= "3.9" and python_version < "3.14"
+poetry-core
