@@ -1,2 +1,0 @@
-maturin==1.4.0; python_version >= "3.9" and python_version < "3.14"
-cryptography==43.0.1 ; python_version >= "3.9" and python_version < "3.14"
