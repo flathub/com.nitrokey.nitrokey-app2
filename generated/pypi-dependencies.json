@@ -55,8 +55,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/94/f7/73cf2ae0d6db943a627d28c09f5368735fce6b8b2ad1e1f6bcda2632c80a/maturin-1.9.1.tar.gz",
-          "sha256": "97b52fb19d20c1fdc70e4efdc05d79853a4c9c0051030c93a793cd5181dc4ccd"
+          "url": "https://files.pythonhosted.org/packages/b1/b5/8d9843ba4d2a107ea83499d0fb6758d6d9376a3e2202dbcc5ffa972e2e4a/maturin-1.9.2.tar.gz",
+          "sha256": "8b534d3a8acb922fc7a01ec89c12ba950dccdc11b57457c1d4c2661ae24bf96d"
         },
         "maturin.cargo-sources.json"
       ],
@@ -218,7 +218,7 @@
       "name": "python3-nitrokey",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.2.3\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.3.2\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -263,8 +263,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/c4/64/fb67226d2c6e47f8e805c0b5807ff170647f20b9a1c228fab2e6ff8fa7d5/nitrokey-0.2.3-py3-none-any.whl",
-          "sha256": "f3b3d1f879fdec2d8ccce23d74a0a4779a27d2363ecf4a961664679632c661a6"
+          "url": "https://files.pythonhosted.org/packages/f7/a9/040dafe40238d69ed12cb397efb7ba3b37d11078b7c35b1dba903656e2f4/nitrokey-0.3.2-py3-none-any.whl",
+          "sha256": "f0e91d57a9958dc785019424cd9e1e22a4ff2d7348496acd27aa5f238d81b0b2"
         },
         {
           "type": "file",
@@ -525,7 +525,7 @@
       "name": "python3-usb-monitor",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"usb-monitor==1.21\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"usb-monitor==1.23\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -535,8 +535,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/75/aa/6b7816452c38f873e223c9f57aa5d549d07692909afbe65bdbb5d21c5af4/usb_monitor-1.21-py3-none-any.whl",
-          "sha256": "1bd785f765f393ed49e5e2ef2107d9a687b8000e0016fdb77f2014f7586781dd"
+          "url": "https://files.pythonhosted.org/packages/a4/0f/b29fa81cf7a44be5b41671424c805fa93f35072191499625552e894d16bf/usb_monitor-1.23-py3-none-any.whl",
+          "sha256": "4753747dedf862bcdbd3c339c59a0d7ea9e133091e38bc3f8f3133dc217776bd"
         }
       ]
     },
