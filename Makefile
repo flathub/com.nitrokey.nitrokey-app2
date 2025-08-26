@@ -35,8 +35,8 @@ generated/pypi-dependencies.json: generated/requirements.txt venv
 	# fix markupsafe
 	sed -i -r 's/pip3 install --verbose(.*?)markupsafe(.*?)/pip3 install -I --verbose \1markupsafe\2/g' $@
 
-	./prepare-rust-package.sh maturin
-	./prepare-rust-package.sh cryptography
+	bash prepare-rust-package.sh maturin
+	bash prepare-rust-package.sh cryptography
 	
 venv:
 	python -m venv venv
