@@ -29,11 +29,7 @@ check-meta:
 	flatpak run --command=appstream-util org.flatpak.Builder validate builddir/export/share/metainfo/com.nitrokey.nitrokey-app2.appdata.xml
 
 generated/pypi-dependencies.json: generated/requirements.txt venv
-	-flatpak --user remove runtime/org.kde.Sdk/x86_64/6.8
 	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.8" --requirements-file="$<" --output generated/pypi-dependencies
-
-	# fix markupsafe
-	sed -i -r 's/pip3 install --verbose(.*?)markupsafe(.*?)/pip3 install -I --verbose \1markupsafe\2/g' $@
 
 	bash prepare-rust-package.sh maturin
 	bash prepare-rust-package.sh cryptography
