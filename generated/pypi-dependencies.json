@@ -22,8 +22,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/45/23/0ffa0df7550ca0535f6e03b9a9ab2bf0495ac62e15fd322544c98321a10c/scikit_build_core-0.11.5-py3-none-any.whl",
-          "sha256": "fada727b49f6c34f943bd52773a130bbd1f9b322d751251048ddbe2f4ce92761"
+          "url": "https://files.pythonhosted.org/packages/43/49/ec16b3db6893db788ae35f98506ff5a9c25dca7eb18cc38ada8a4c1dc944/scikit_build_core-0.11.6-py3-none-any.whl",
+          "sha256": "ce6d8fe64e6b4c759ea0fb95d2f8a68f60d2df31c2989838633b8ec930736360"
         }
       ]
     },
@@ -55,8 +55,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/b1/b5/8d9843ba4d2a107ea83499d0fb6758d6d9376a3e2202dbcc5ffa972e2e4a/maturin-1.9.2.tar.gz",
-          "sha256": "8b534d3a8acb922fc7a01ec89c12ba950dccdc11b57457c1d4c2661ae24bf96d"
+          "url": "https://files.pythonhosted.org/packages/b5/41/09562a4e76bea332f140aa42e768ac45a1681f2d438e918ab23fad47ad67/maturin-1.9.3.tar.gz",
+          "sha256": "267ac8d0471d1ee2320b8b2ee36f400a32cd2492d7becbd0d976bd3503c2f69b"
         },
         "maturin.cargo-sources.json"
       ],
@@ -161,7 +161,7 @@
       "name": "python3-fido2",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fido2==1.1.3\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"fido2==2.0.0\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -176,8 +176,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/e7/d9/8bfb99128b11829fb6c1b0a5a996dc117224966806e8abb12cbb1fea196e/fido2-1.1.3-py3-none-any.whl",
-          "sha256": "6be34c0b9fe85e4911fd2d103cce7ae8ce2f064384a7a2a3bd970b3ef7702931"
+          "url": "https://files.pythonhosted.org/packages/4c/7d/a1dba174d7ec4b6b8d6360eed0ac3a4a4e2aa45f234e903592d3184c6c3f/fido2-2.0.0-py3-none-any.whl",
+          "sha256": "685f54a50a57e019c6156e2dd699802a603e3abf70bab334f26affdd4fb8d4f7"
         },
         {
           "type": "file",
@@ -218,7 +218,7 @@
       "name": "python3-nitrokey",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.3.2\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.4.0\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -248,8 +248,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/e7/d9/8bfb99128b11829fb6c1b0a5a996dc117224966806e8abb12cbb1fea196e/fido2-1.1.3-py3-none-any.whl",
-          "sha256": "6be34c0b9fe85e4911fd2d103cce7ae8ce2f064384a7a2a3bd970b3ef7702931"
+          "url": "https://files.pythonhosted.org/packages/4c/7d/a1dba174d7ec4b6b8d6360eed0ac3a4a4e2aa45f234e903592d3184c6c3f/fido2-2.0.0-py3-none-any.whl",
+          "sha256": "685f54a50a57e019c6156e2dd699802a603e3abf70bab334f26affdd4fb8d4f7"
         },
         {
           "type": "file",
@@ -263,8 +263,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/f7/a9/040dafe40238d69ed12cb397efb7ba3b37d11078b7c35b1dba903656e2f4/nitrokey-0.3.2-py3-none-any.whl",
-          "sha256": "f0e91d57a9958dc785019424cd9e1e22a4ff2d7348496acd27aa5f238d81b0b2"
+          "url": "https://files.pythonhosted.org/packages/72/b2/2d4bf206930948378bd1a5c1953d1e43ca29a991d5d6e111336ea29344fc/nitrokey-0.4.0-py3-none-any.whl",
+          "sha256": "743a660042999c6298e394df3822e16f57e4898fa37bd20a916569faef58816a"
         },
         {
           "type": "file",
