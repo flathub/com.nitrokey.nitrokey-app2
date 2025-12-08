@@ -29,7 +29,7 @@ check-meta:
 	flatpak run --command=appstream-util org.flatpak.Builder validate builddir/export/share/metainfo/com.nitrokey.nitrokey-app2.appdata.xml
 
 generated/pypi-dependencies.json: generated/requirements.txt venv
-	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.8" --requirements-file="$<" --output generated/pypi-dependencies
+	venv/bin/python tools/flatpak-pip-generator --runtime="org.kde.Sdk//6.10" --requirements-file="$<" --output generated/pypi-dependencies
 
 	bash prepare-rust-package.sh maturin
 	bash prepare-rust-package.sh cryptography
