@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "nitrokeyapp"
-version = "2.4.1"
+version = "2.4.3"
 description = "Graphical application to manage Nitrokey devices"
 authors = [
   { name = "Nitrokey", email = "pypi@nitrokey.com" },
@@ -13,7 +13,7 @@ license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/nitrokey/nitrokey-app2"
 documentation = "https://docs.nitrokey.com/software/nk-app2/"
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.10,<3.15"
 dynamic = [
   "classifiers",
   "dependencies",
@@ -40,22 +40,29 @@ usb-monitor = "^1.21"
 
 [tool.poetry.group.dev.dependencies]
 PySide6-stubs = "^6.4.2"
-black = ">=22.1.0,<23"
-flake8 = "^6.1.0"
-isort = "^5.12.0"
+ruff = "^0.14"
 mypy = ">=1.4,<1.5"
 
 [tool.poetry.group.deploy.dependencies]
 pyinstaller = "^6.3.0"
 pyinstaller-versionfile = { version = "2.1.1", markers = "sys_platform=='win32'" }
 
-[tool.isort]
-py_version = "310"
-profile = "black"
-line_length = 80
+[tool.ruff]
+line-length = 100
 
-[tool.black]
-target-version = ["py310"]
+[tool.ruff.format]
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = ["B", "C", "E", "F", "W", "B9", "I"]
+ignore = ["E501"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 30
+
+[tool.ruff.lint.isort]
+known-first-party = ["nitrokeyapp"]
+split-on-trailing-comma = false
 
 [tool.mypy]
 show_error_codes = true
