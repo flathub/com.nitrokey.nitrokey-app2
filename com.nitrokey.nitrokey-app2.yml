@@ -24,6 +24,7 @@ finish-args:
 - --socket=wayland
 - --device=all
 - --share=network
+- --filesystem=/run/udev:ro
 modules:
 - generated/pypi-dependencies.json
 - name: nkapp
