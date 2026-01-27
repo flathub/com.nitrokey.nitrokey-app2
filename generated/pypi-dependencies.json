@@ -12,13 +12,13 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl",
-          "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+          "url": "https://files.pythonhosted.org/packages/b7/b9/c538f279a4e237a006a2c98387d081e9eb060d203d8ed34467cc0f0b9b53/packaging-26.0-py3-none-any.whl",
+          "sha256": "b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529"
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl",
-          "sha256": "a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08"
+          "url": "https://files.pythonhosted.org/packages/ef/3c/2c197d226f9ea224a9ab8d197933f9da0ae0aac5b6e0f884e2b8d9c8e9f7/pathspec-1.0.4-py3-none-any.whl",
+          "sha256": "fb6ae2fd4e7c921a165808a552060e722767cfa526f99ca5156ed2ce45a5c723"
         },
         {
           "type": "file",
@@ -55,8 +55,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/02/44/c593afce7d418ae6016b955c978055232359ad28c707a9ac6643fc60512d/maturin-1.10.2.tar.gz",
-          "sha256": "259292563da89850bf8f7d37aa4ddba22905214c1e180b1c8f55505dfd8c0e81"
+          "url": "https://files.pythonhosted.org/packages/a4/84/bfed8cc10e2d8b6656cf0f0ca6609218e6fcb45a62929f5094e1063570f7/maturin-1.11.5.tar.gz",
+          "sha256": "7579cf47640fb9595a19fe83a742cbf63203f0343055c349c1cab39045a30c29"
         },
         "maturin.cargo-sources.json"
       ],
@@ -218,7 +218,7 @@
       "name": "python3-nitrokey",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.4.0\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.4.2\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -263,8 +263,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/72/b2/2d4bf206930948378bd1a5c1953d1e43ca29a991d5d6e111336ea29344fc/nitrokey-0.4.0-py3-none-any.whl",
-          "sha256": "743a660042999c6298e394df3822e16f57e4898fa37bd20a916569faef58816a"
+          "url": "https://files.pythonhosted.org/packages/c4/f2/234fbca61d3544b95d747a9caa8054fa37a99b2bd39f86caf12aa421df7a/nitrokey-0.4.2-py3-none-any.whl",
+          "sha256": "1846944d8283e2632d2f0084283f36cabee7a2cfcad1926babfbf6d84614c954"
         },
         {
           "type": "file",
@@ -549,8 +549,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/c7/d8/bb2f602f5e012e177e1c8560125f9770945d36622595990cf1cb794477c2/poetry_core-2.2.1-py3-none-any.whl",
-          "sha256": "bdfce710edc10bfcf9ab35041605c480829be4ab23f5bc01202cfe5db8f125ab"
+          "url": "https://files.pythonhosted.org/packages/5a/aa/b54e3ff674c6735ae62f9527977627063d4049d0852cb9639126b3f856a3/poetry_core-2.3.0-py3-none-any.whl",
+          "sha256": "fc42f3854e346e4b96fb2b38d29e6873ec2ed25fbd7b8f1afba06613a966eaef"
         }
       ]
     }

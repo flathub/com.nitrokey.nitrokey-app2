@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "nitrokeyapp"
-version = "2.4.3"
+version = "2.5.2"
 description = "Graphical application to manage Nitrokey devices"
 authors = [
   { name = "Nitrokey", email = "pypi@nitrokey.com" },
@@ -33,7 +33,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 fido2 = "^2"
-nitrokey = "^0.4"
+nitrokey = "^0.4.2"
 pySide6 = ">=6.6.0"
 pywin32 = { version = ">=305", markers = "sys_platform =='win32'" }
 usb-monitor = "^1.21"
@@ -44,7 +44,7 @@ ruff = "^0.14"
 mypy = ">=1.4,<1.5"
 
 [tool.poetry.group.deploy.dependencies]
-pyinstaller = "^6.3.0"
+pyinstaller = "^6.18.0"
 pyinstaller-versionfile = { version = "2.1.1", markers = "sys_platform=='win32'" }
 
 [tool.ruff]
