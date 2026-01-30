@@ -37,6 +37,6 @@ modules:
   - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
   sources:
   - type: archive
-    url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.4.3.tar.gz
-    sha256: '2b03d7ab7490468c1954bd1d08cebe415c724252e211d4563b452b350edfcc09'
+    url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.5.2.tar.gz
+    sha256: '9513d6cb8305aadd05fa62c1e8e647a209ffa4135d22c655b28e84fd65d0cd8f'
 
