@@ -12,13 +12,13 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/b7/b9/c538f279a4e237a006a2c98387d081e9eb060d203d8ed34467cc0f0b9b53/packaging-26.0-py3-none-any.whl",
-          "sha256": "b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529"
+          "url": "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl",
+          "sha256": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/ef/3c/2c197d226f9ea224a9ab8d197933f9da0ae0aac5b6e0f884e2b8d9c8e9f7/pathspec-1.0.4-py3-none-any.whl",
-          "sha256": "fb6ae2fd4e7c921a165808a552060e722767cfa526f99ca5156ed2ce45a5c723"
+          "url": "https://files.pythonhosted.org/packages/f1/d9/7fb5aa316bc299258e68c73ba3bddbc499654a07f151cba08f6153988714/pathspec-1.1.1-py3-none-any.whl",
+          "sha256": "a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189"
         },
         {
           "type": "file",
@@ -41,8 +41,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/f9/7b/d05b1778f2d4e354d103e3421c6267d923032fefcc5ca5b7df0cb21cefd0/setuptools_rust-1.12.0-py3-none-any.whl",
-          "sha256": "7e7db90547f224a835b45f5ad90c983340828a345554a9a660bdb2de8605dcdd"
+          "url": "https://files.pythonhosted.org/packages/b7/29/c12876926be20e100527f541c792731ea09b995139aee9676eaacd1b751e/setuptools_rust-1.12.1-py3-none-any.whl",
+          "sha256": "b7ebd6a182e7aefa97a072e880530c9b0ec8fcca8617e0bb8ff299c1a064f693"
         }
       ]
     },
@@ -55,8 +55,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/0c/18/8b2eebd3ea086a5ec73d7081f95ec64918ceda1900075902fc296ea3ad55/maturin-1.12.6.tar.gz",
-          "sha256": "d37be3a811a7f2ee28a0fa0964187efa50e90f21da0c6135c27787fa0b6a89db"
+          "url": "https://files.pythonhosted.org/packages/9c/1c/612d23d33ec21b9ae7ece7b3f0dd5f9dfd57b4009e9d2938165869ebd6ae/maturin-1.13.3.tar.gz",
+          "sha256": "771e1e9e71a278e56db01552e0d1acfd1464259f9575b6e72842f893cd299079"
         },
         "maturin.cargo-sources.json"
       ],
@@ -218,7 +218,7 @@
       "name": "python3-nitrokey",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.5.0rc1\" --no-build-isolation"
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"nitrokey==0.5.0rc2\" --no-build-isolation"
       ],
       "sources": [
         {
@@ -263,8 +263,8 @@
         },
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/ee/cd/d992ffbfa0a1531a0ea08120087b90a8dc600ecd599e4cc4bde51b883850/nitrokey-0.5.0rc1-py3-none-any.whl",
-          "sha256": "34a759d537009b7d6c22b2ecb5d367493c10e2ea68e759baa7f617871ffbb71f"
+          "url": "https://files.pythonhosted.org/packages/68/56/708ce6bb6ba491b2da8224cb240dfac52b3a2f5afd734a0ad4b5d0133db2/nitrokey-0.5.0rc2-py3-none-any.whl",
+          "sha256": "0b6df5ac57b46024b02d904636335c6aa3331c2796ed36ec7398bf56653b9267"
         },
         {
           "type": "file",
@@ -549,8 +549,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://files.pythonhosted.org/packages/01/10/c9f7ca739ab0956f8dc8737e6318b9812745589ed1e3f6fdfb6a5d64f58a/poetry_core-2.3.1-py3-none-any.whl",
-          "sha256": "db1cf63b782570deb38bfba61e2304a553eef0740dc17959a50cc0f5115ee634"
+          "url": "https://files.pythonhosted.org/packages/6f/7f/6d97fb5b00cdb89159b648d16bee1d7c2c5046605c83868f36f940c99098/poetry_core-2.4.0-py3-none-any.whl",
+          "sha256": "4305848477da00272bebd3f615bbec87f64bd117cdb858ab660b626a06a9d96c"
         }
       ]
     }
