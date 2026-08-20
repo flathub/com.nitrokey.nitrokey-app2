@@ -13,7 +13,7 @@ license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/nitrokey/nitrokey-app2"
 documentation = "https://docs.nitrokey.com/software/nk-app2/"
-requires-python = ">=3.10,<3.15"
+requires-python = ">=3.11,<3.15"
 dynamic = [
   "classifiers",
   "dependencies",
@@ -23,7 +23,7 @@ packages = [
 ]
 
 [project.scripts]
-nitrokeyapp = "nitrokeyapp.__main__:main"
+nitrokey-app2 = "nitrokeyapp.__main__:main"
 
 [tool.poetry]
 classifiers = [
@@ -32,18 +32,21 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
+click = "^8"
 fido2 = "^2"
-nitrokey = "=0.5.0-rc.2"
+nitrokey = { git = "https://github.com/Nitrokey/nitrokey-sdk-py.git", rev = "45d45224bf3a5110d87179cfe00d961d1d9911e2" }
 pySide6 = ">=6.6.0"
 pywin32 = { version = ">=305", markers = "sys_platform =='win32'" }
 usb-monitor = "^1.21"
 
 [project.optional-dependencies]
-pcsc = ["nitrokey[pcsc]"]
+pcsc = [
+    "nitrokey[pcsc] @ git+https://github.com/Nitrokey/nitrokey-sdk-py.git@45d45224bf3a5110d87179cfe00d961d1d9911e2"
+]
 
 
 [tool.poetry.group.dev.dependencies]
-PySide6-stubs = "^6.4.2"
+PySide6-stubs = "^6.6.0"
 ruff = "^0.14"
 mypy = ">=1.18,<1.19"
 
@@ -70,7 +73,7 @@ split-on-trailing-comma = false
 
 [tool.mypy]
 show_error_codes = true
-python_version = "3.10"
+python_version = "3.11"
 
 [[tool.mypy.overrides]]
 module = [
@@ -95,3 +98,8 @@ module = [
   "usbmonitor.*",
 ]
 ignore_missing_imports = true
+
+[tool.uv]
+exclude-newer = "7 days"
+# Can be used to update packages to a version more recent what exclude-newer allows
+exclude-newer-package = { nitrokey = false }

@@ -4,7 +4,7 @@ runtime-version: '6.10'
 sdk: org.kde.Sdk
 sdk-extensions:
 - org.freedesktop.Sdk.Extension.rust-stable
-command: nitrokeyapp
+command: nitrokey-app2
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
   env:
@@ -12,7 +12,7 @@ build-options:
   - "POETRY_INSTALLER_MAX_WORKERS=1"
   - "HIDAPI_WITH_LIBUSB=0"
 cleanup-commands:
-- "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokeyapp | xargs rm"
+- "find ${FLATPAK_DEST}/bin -type f | grep -v nitrokey-app2 | xargs rm"
 - "rm -rf ${FLATPAK_DEST}/bin/pyside6-{assistant,designer,linguist,lrelease,lupdate,qmllint}"
 - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{assistant,designer,linguist,lrelease,lupdate,qmllint}"
 - "rm -rf ${FLATPAK_DEST}/lib/python3.*/site-packages/PySide6/{examples,Qt/resources}"
@@ -29,14 +29,15 @@ modules:
 - generated/pypi-dependencies.json
 - name: nkapp
   buildsystem: simple
+  # deps come from generated/pypi-dependencies.json; --no-deps keeps pip from re-fetching the git-pinned nitrokey SDK, which the offline build cannot do
   build-commands:
-  - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation
+  - pip install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation --no-deps
   - install -Dm644 meta/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
   - install -Dm644 meta/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
   - install -Dm644 meta/nk-app2.svg ${FLATPAK_DEST}/share/icons/hicolor/scaleable/apps/${FLATPAK_ID}.svg
   - install -Dm644 meta/nk-app2.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
   sources:
   - type: archive
-    url: https://github.com/Nitrokey/nitrokey-app2/archive/v2.7.1.tar.gz
-    sha256: '8707423028f4bcfdb0ab4e1c04e1d1b17b33e6301159654c351ceeee82d45cec'
+    url: https://github.com/Nitrokey/nitrokey-app2/archive/f4e0db9fd985311538eb77b1cae1f00daf9e2589.tar.gz
+    sha256: '3e361a0a737f7d096bf84f0b9d66cda3187207dca675796e4673aeb9e36a0373'
 
